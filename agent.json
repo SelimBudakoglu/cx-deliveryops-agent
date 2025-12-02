@@ -1,0 +1,32 @@
+{
+  "name": "CiscoCX-DeliveryOps-Agent",
+  "description": "A lightweight orchestration and validation agent used within Cisco Customer Experience (CX) environments. Provides operational signals, lifecycle metadata, and integration checkpoints for automated workflows, environment validation, and inter-agent coordination.",
+  "version": "1.0.0",
+  "protocol": "A2A/preview",
+  "capabilities": [
+    "health-check",
+    "environment-metadata",
+    "integration-validation"
+  ],
+  "actions": {
+    "health-check": {
+      "method": "GET",
+      "endpoint": "/action/health-check",
+      "description": "Returns static operational health indicators for CX workflow validation."
+    },
+    "environment-metadata": {
+      "method": "GET",
+      "endpoint": "/action/environment-metadata",
+      "description": "Provides metadata about the delivery environment for automated CX workflows."
+    },
+    "integration-validation": {
+      "method": "POST",
+      "endpoint": "/action/integration-validation",
+      "description": "Accepts a payload describing a system integration and returns a deterministic validation response."
+    }
+  },
+  "owner": {
+    "organization": "Cisco Customer Experience (CX)",
+    "contact": "cx-support@cisco.example"
+  }
+}
